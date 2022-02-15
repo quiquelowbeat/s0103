@@ -1,11 +1,6 @@
 package n1exercici4;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Main {
 
@@ -107,6 +102,7 @@ public class Main {
 				System.out.println(it.next().toString());
 				
 			}
+			
 		}
 		
 		
