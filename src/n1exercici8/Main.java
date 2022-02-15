@@ -15,8 +15,11 @@ public class Main {
 		lhm.put("Paris", "Francia");
 		lhm.put("Berlin", "Alemania");
 		lhm.put("Oslo", "Noruega");
+		lhm.put("Lisboa", "Portugal");
 		
 		ArrayList<Map.Entry<String, String>> arrayCapitals = new ArrayList<>(lhm.entrySet());
+		
+		lhm.clear(); // Buidem la LinkedHashMap.
 		
 		System.out.println("ArrayList unsorted:\n");
 		
@@ -33,9 +36,11 @@ public class Main {
 		for(Map.Entry<String, String> capitals : arrayCapitals) { 
 			
 			System.out.println(capitals.getKey() + " - " + capitals.getValue()); // Test per combrobar ordenació.
-			lhm.put(capitals.getKey(), capitals.getValue());
-			
+			lhm.put(capitals.getKey(), capitals.getValue()); // Afegim de nou al LinkedHashMap.
+		
 		}
+		
+		
 		
 		System.out.println("\nArrayList to LinkedHashMap:\n");
 		
@@ -44,8 +49,13 @@ public class Main {
 			System.out.println(sortedCapitals.getKey() + " - " + sortedCapitals.getValue());
 			
 		}
-		/* Conclusió: al passar de ArrayList a LinkedHashMap de nou, torna a endreçar els elements per
-		 * ordre d'inserció. 
+		
+		/* Conclusions: 
+		 * 1- Si buidem la LinkedHashMap prèviament amb el mètode lhm.clear(): el resultat és la llista de dades
+		 * endreçada alfabèticament per l'ArrayList.
+		 * 2- Si no buidem la LinkedHashMap amb el mètode lhm.clear() manté la ordenació original perque al traspassar
+		 * de l'ArrayList a LinkedHashMap no admet entrades duplicades, per tant es manté l'ordre d'inserció original.
+		 * 
 		 */
 		
 	}
