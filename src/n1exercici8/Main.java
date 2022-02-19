@@ -40,8 +40,6 @@ public class Main {
 		
 		}
 		
-		
-		
 		System.out.println("\nArrayList to LinkedHashMap:\n");
 		
 		for(Map.Entry<String, String> sortedCapitals : lhm.entrySet()) {
